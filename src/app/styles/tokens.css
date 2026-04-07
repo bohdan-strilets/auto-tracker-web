@@ -1,0 +1,119 @@
+@layer base {
+  :root {
+    /* ─── Colors: Brand ─────────────────────────────────────── */
+    --color-primary: #4da3ff;
+    --color-primary-light: #7bc3ff;
+    --color-primary-dark: #3d8fe6;
+
+    /* ─── Colors: Semantic ──────────────────────────────────── */
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-info: #3b82f6;
+
+    /* ─── Colors: Event Categories ──────────────────────────── */
+    --color-fuel: #3b82f6;
+    --color-service: #f97316;
+    --color-documents: #10b981;
+    --color-expenses: #8b5cf6;
+    --color-reminders: #f59e0b;
+
+    /* ─── Colors: Background ────────────────────────────────── */
+    --color-bg: #f6f7fb;
+    --color-bg-card: #ffffff;
+    --color-bg-elevated: #ffffff;
+    --color-bg-muted: #f0f2f7;
+
+    /* ─── Colors: Text ──────────────────────────────────────── */
+    --color-text-primary: #1a1d29;
+    --color-text-secondary: #6b7280;
+    --color-text-tertiary: #9ca3af;
+    --color-text-disabled: #d1d5db;
+    --color-text-inverse: #ffffff;
+
+    /* ─── Colors: Border ────────────────────────────────────── */
+    --color-border: rgba(0, 0, 0, 0.1);
+    --color-border-medium: #d1d5db;
+
+    /* ─── Radius ────────────────────────────────────────────── */
+    --radius-sm: 6px;
+    --radius-base: 12px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+    --radius-xl: 24px;
+    --radius-2xl: 32px;
+    --radius-full: 9999px;
+
+    /* ─── Shadows ────────────────────────────────────────────── */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-base: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
+    --shadow-glow-primary: 0 8px 20px rgba(77, 163, 255, 0.25);
+    --shadow-glow-expenses: 0 8px 20px rgba(139, 92, 246, 0.25);
+
+    /* ─── Z-index ────────────────────────────────────────────── */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-overlay: 300;
+    --z-modal: 400;
+    --z-popover: 500;
+    --z-toast: 600;
+    --z-tooltip: 700;
+
+    /* ─── Transitions ────────────────────────────────────────── */
+    --duration-fast: 150ms;
+    --duration-normal: 250ms;
+    --duration-slow: 350ms;
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* ─── shadcn mapped tokens ───────────────────────────────── */
+    --background: var(--color-bg);
+    --foreground: var(--color-text-primary);
+    --card: var(--color-bg-card);
+    --card-foreground: var(--color-text-primary);
+    --popover: var(--color-bg-card);
+    --popover-foreground: var(--color-text-primary);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-text-inverse);
+    --secondary: var(--color-bg-muted);
+    --secondary-foreground: var(--color-text-primary);
+    --muted: var(--color-bg-muted);
+    --muted-foreground: var(--color-text-secondary);
+    --accent: var(--color-bg-muted);
+    --accent-foreground: var(--color-text-primary);
+    --destructive: var(--color-error);
+    --destructive-foreground: var(--color-text-inverse);
+    --border: var(--color-border);
+    --input: var(--color-bg-muted);
+    --ring: var(--color-primary);
+    --radius: var(--radius-base);
+  }
+
+  /* ─── Dark theme ─────────────────────────────────────────── */
+  .dark {
+    --color-bg: #0a0e1a;
+    --color-bg-card: #1a1f2e;
+    --color-bg-elevated: #242938;
+    --color-bg-muted: #1a1f2e;
+
+    --color-text-primary: #f9fafb;
+    --color-text-secondary: #d1d5db;
+    --color-text-tertiary: #9ca3af;
+    --color-text-disabled: #6b7280;
+    --color-text-inverse: #1a1d29;
+
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-border-medium: #363b4a;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-base: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+  }
+}

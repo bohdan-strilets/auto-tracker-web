@@ -80,4 +80,11 @@ export default defineConfig([
   {
     ignores: ['dist/**', 'node_modules/**'],
   },
+
+  {
+    files: ['src/shared/ui/**/*.tsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+    },
+  },
 ]);
