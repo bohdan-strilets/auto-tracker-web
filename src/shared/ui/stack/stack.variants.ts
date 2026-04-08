@@ -1,0 +1,59 @@
+import { cva } from 'class-variance-authority';
+
+export const stackVariants = cva('flex', {
+  variants: {
+    direction: {
+      row: 'flex-row',
+      column: 'flex-col',
+    },
+
+    align: {
+      start: 'items-start',
+      center: 'items-center',
+      end: 'items-end',
+      stretch: 'items-stretch',
+      baseline: 'items-baseline',
+    },
+
+    justify: {
+      start: 'justify-start',
+      center: 'justify-center',
+      end: 'justify-end',
+      between: 'justify-between',
+      around: 'justify-around',
+      evenly: 'justify-evenly',
+    },
+
+    wrap: {
+      wrap: 'flex-wrap',
+      nowrap: 'flex-nowrap',
+      'wrap-reverse': 'flex-wrap-reverse',
+    },
+
+    gap: {
+      none: 'gap-0',
+      xs: 'gap-1',
+      sm: 'gap-2',
+      md: 'gap-4',
+      lg: 'gap-6',
+      xl: 'gap-8',
+      '2xl': 'gap-12',
+    },
+
+    fullWidth: {
+      true: 'w-full',
+    },
+
+    fullHeight: {
+      true: 'h-full',
+    },
+  },
+
+  defaultVariants: {
+    direction: 'column',
+    align: 'stretch',
+    justify: 'start',
+    wrap: 'nowrap',
+    gap: 'none',
+  },
+});
