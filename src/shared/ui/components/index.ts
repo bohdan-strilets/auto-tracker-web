@@ -5,3 +5,4 @@ export { Spinner } from './spinner';
 export { Input } from './input';
 export { FormField } from './form-field';
 export { NumberInput } from './number-input';
+export { Select } from './select';
