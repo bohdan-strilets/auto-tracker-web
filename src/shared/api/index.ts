@@ -10,3 +10,4 @@ export type {
   RequestOptions,
 } from './types';
 export { isApiError, getErrorMessage } from './utils';
+export { ENDPOINTS } from './endpoints';
