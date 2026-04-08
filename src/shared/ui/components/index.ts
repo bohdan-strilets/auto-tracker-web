@@ -7,3 +7,5 @@ export { FormField } from './form-field';
 export { NumberInput } from './number-input';
 export { Select } from './select';
 export { Button } from './button';
+export { FormError } from './form-error';
+export { Link } from './link';
