@@ -1,2 +1,2 @@
-export { AppProvider } from './app.provider';
-export { ReactQueryProvider } from './react-query.provider';
+export { AppProvider } from './AppProvider';
+export { ReactQueryProvider } from './ReactQueryProvider';
