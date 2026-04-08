@@ -2,6 +2,8 @@ import type { AxiosInstance, AxiosError } from 'axios';
 
 import { router } from '@app/router';
 
+import { PATHS } from '@shared/router';
+
 import { ApiError } from './api-error';
 import type { ErrorResponse } from './types';
 
@@ -12,7 +14,7 @@ export const authInterceptor = (client: AxiosInstance): void => {
       // logout user if 401 is returned and we're not already on the login page
 
       if (error.response?.status === 401) {
-        void router.navigate('/auth/login', { replace: true });
+        void router.navigate(PATHS.auth.login, { replace: true });
       }
 
       return Promise.reject(error);
