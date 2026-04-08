@@ -1,5 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 
+import { AuthLayout } from '@app/layouts';
+
 import { AddEventPage } from '@pages/AddEvent';
 import { GaragePage } from '@pages/GaragePage';
 import { HomePage } from '@pages/HomePage';
@@ -15,6 +17,7 @@ export const router = createBrowserRouter([
   // Auth routes (public)
   {
     path: '/auth',
+    element: <AuthLayout />,
     children: [
       { path: 'login', element: <LoginPage /> },
       { path: 'register', element: <RegisterPage /> },
