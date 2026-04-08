@@ -13,10 +13,6 @@ export type ErrorResponse = {
 
 // ─── Success response types ───────────────────────────────────
 
-export type ApiResponse<T> = {
-  data: T;
-};
-
 export type PaginationMeta = {
   total: number;
   page: number;
