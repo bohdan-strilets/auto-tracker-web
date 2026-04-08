@@ -1,8 +1,8 @@
+import { ApiError } from './api-error';
 import { errorMessages, FALLBACK_MESSAGE } from './error-messages';
-import type { ErrorResponse } from './types';
 
-export const isApiError = (error: unknown): error is ErrorResponse => {
-  return typeof error === 'object' && error !== null && 'code' in error && 'statusCode' in error;
+export const isApiError = (error: unknown): error is ApiError => {
+  return error instanceof ApiError;
 };
 
 export const getErrorMessage = (code: string): string => {
