@@ -2,6 +2,7 @@ export const PATHS = {
   auth: {
     login: '/auth/login',
     register: '/auth/register',
+    verifyEmailNotice: '/auth/verify-email-notice',
   },
 
   garage: {
