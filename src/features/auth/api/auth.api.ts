@@ -1,0 +1,30 @@
+import { ENDPOINTS, http } from '@shared/api';
+
+import type {
+  AuthResponse,
+  LoginPayload,
+  RefreshResponse,
+  RegisterPayload,
+} from '../model/auth.types';
+
+export const authApi = {
+  login: (payload: LoginPayload) => {
+    return http.post<AuthResponse>(ENDPOINTS.auth.login, payload);
+  },
+
+  register: (payload: RegisterPayload) => {
+    return http.post<AuthResponse>(ENDPOINTS.auth.register, payload);
+  },
+
+  logout: () => {
+    return http.post(ENDPOINTS.auth.logout);
+  },
+
+  logoutAll: () => {
+    return http.post(ENDPOINTS.auth.logoutAll);
+  },
+
+  refresh: () => {
+    return http.post<RefreshResponse>(ENDPOINTS.auth.refresh);
+  },
+};
