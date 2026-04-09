@@ -9,3 +9,4 @@ export { Select } from './select';
 export { Button } from './button';
 export { FormError } from './form-error';
 export { Link } from './link';
+export { IconBox } from './icon-box';
