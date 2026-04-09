@@ -14,3 +14,5 @@ export {
   useSetInitialized,
 } from './auth.selectors';
 export { useLoginForm } from './use-login-form';
+export { useResendVerification } from './use-resend-verification';
+export { useVerifyEmail } from './use-verify-email';

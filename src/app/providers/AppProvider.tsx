@@ -7,7 +7,7 @@ import { ReactQueryProvider } from './ReactQueryProvider';
 export const AppProvider = () => {
   return (
     <ReactQueryProvider>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </ReactQueryProvider>
   );
 };

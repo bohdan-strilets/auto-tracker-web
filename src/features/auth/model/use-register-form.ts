@@ -1,11 +1,9 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
 
 import { isApiError, getErrorMessage, ERROR_CODES } from '@shared/api';
 import { setFieldErrors } from '@shared/lib/form';
 import { detectLocale, detectTimezone } from '@shared/lib/locale';
-import { PATHS } from '@shared/router';
 
 import { useRegisterMutation } from '../api';
 
@@ -14,7 +12,6 @@ import type { RegisterPayload } from './auth.types';
 import { registerSchema, type RegisterFormValues } from './register.schema';
 
 export const useRegisterForm = () => {
-  const navigate = useNavigate();
   const { mutateAsync, isPending } = useRegisterMutation();
   const setAuth = useSetAuth();
 
@@ -33,7 +30,6 @@ export const useRegisterForm = () => {
     try {
       const { user, accessToken } = await mutateAsync(payload);
       setAuth(user, accessToken);
-      await navigate(PATHS.auth.verifyEmailNotice, { replace: true });
     } catch (error) {
       if (isApiError(error)) {
         if (error.details?.length) {

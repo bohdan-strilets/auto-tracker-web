@@ -12,8 +12,10 @@ import { RemindersPage } from '@pages/RemindersPage';
 import { StatisticsPage } from '@pages/StatisticsPage';
 import { TimelinePage } from '@pages/TimelinePage';
 import { VehiclePage } from '@pages/VehiclePage';
+import { VerifyEmailNoticePage } from '@pages/VerifyEmailNoticePage';
+import { VerifyEmailPage } from '@pages/VerifyEmailPage';
 
-import { ProtectedRoute, PublicRoute } from './guards';
+import { ProtectedRoute, PublicRoute, VerifiedRoute } from './guards';
 
 export const router = createBrowserRouter([
   // Public
@@ -31,6 +33,9 @@ export const router = createBrowserRouter([
     ],
   },
 
+  // Common
+  { path: '/auth/verify-email', element: <VerifyEmailPage /> },
+
   // Protected
   {
     element: <ProtectedRoute />,
@@ -38,19 +43,28 @@ export const router = createBrowserRouter([
       {
         path: '/',
         children: [
-          { index: true, element: <HomePage /> },
-          { path: 'garage', element: <GaragePage /> },
-          { path: 'garage/:vehicleId', element: <VehiclePage /> },
-          { path: 'garage/:vehicleId/timeline', element: <TimelinePage /> },
-          { path: 'garage/:vehicleId/add-event', element: <AddEventPage /> },
-          { path: 'reminders', element: <RemindersPage /> },
-          { path: 'statistics', element: <StatisticsPage /> },
-          { path: 'profile', element: <ProfilePage /> },
+          // Verified — only for users with verified email
+          {
+            element: <VerifiedRoute />,
+            children: [
+              { index: true, element: <HomePage /> },
+              { path: 'garage', element: <GaragePage /> },
+              { path: 'garage/:vehicleId', element: <VehiclePage /> },
+              { path: 'garage/:vehicleId/timeline', element: <TimelinePage /> },
+              { path: 'garage/:vehicleId/add-event', element: <AddEventPage /> },
+              { path: 'reminders', element: <RemindersPage /> },
+              { path: 'statistics', element: <StatisticsPage /> },
+              { path: 'profile', element: <ProfilePage /> },
+            ],
+          },
+
+          // Protected but without verification
+          { path: 'verify-email-notice', element: <VerifyEmailNoticePage /> },
         ],
       },
     ],
   },
 
-  // 404
+  // Fallback route
   { path: '*', element: <div>404</div> },
 ]);

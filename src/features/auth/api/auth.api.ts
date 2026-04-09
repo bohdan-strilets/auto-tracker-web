@@ -33,4 +33,12 @@ export const authApi = {
   me: async (): Promise<User> => {
     return http.get<User>(ENDPOINTS.auth.me);
   },
+
+  resendVerification: async (email: string): Promise<void> => {
+    await http.post(ENDPOINTS.auth.resendVerification, { email });
+  },
+
+  verifyEmail: async (token: string): Promise<void> => {
+    await http.post(ENDPOINTS.auth.verifyEmail, { token });
+  },
 };

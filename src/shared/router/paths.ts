@@ -2,7 +2,7 @@ export const PATHS = {
   auth: {
     login: '/auth/login',
     register: '/auth/register',
-    verifyEmailNotice: '/auth/verify-email-notice',
+    verifyEmail: '/auth/verify-email',
   },
 
   garage: {
@@ -11,6 +11,8 @@ export const PATHS = {
     timeline: (vehicleId: string) => `/garage/${vehicleId}/timeline`,
     addEvent: (vehicleId: string) => `/garage/${vehicleId}/add-event`,
   },
+
+  verifyEmailNotice: '/verify-email-notice',
 
   reminders: '/reminders',
   statistics: '/statistics',
