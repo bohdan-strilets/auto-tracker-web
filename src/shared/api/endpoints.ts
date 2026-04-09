@@ -12,6 +12,7 @@ export const ENDPOINTS = {
     changePassword: '/auth/change-password',
     changeEmail: '/auth/change-email',
     confirmEmailChange: '/auth/confirm-email-change',
+    me: '/auth/me',
   },
 
   sessions: {

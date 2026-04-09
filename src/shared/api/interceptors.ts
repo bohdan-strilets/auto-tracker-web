@@ -2,18 +2,35 @@ import type { AxiosInstance, AxiosError } from 'axios';
 
 import { router } from '@app/router';
 
+import { useAuthStore } from '@features/auth';
+
 import { PATHS } from '@shared/router';
 
 import { ApiError } from './api-error';
+import { ENDPOINTS } from './endpoints';
 import type { ErrorResponse } from './types';
+
+export const tokenInterceptor = (client: AxiosInstance): void => {
+  client.interceptors.request.use((config) => {
+    const accessToken = useAuthStore.getState().accessToken;
+
+    if (accessToken) {
+      config.headers.Authorization = `Bearer ${accessToken}`;
+    }
+
+    return config;
+  });
+};
 
 export const authInterceptor = (client: AxiosInstance): void => {
   client.interceptors.response.use(
     (response) => response,
     (error: AxiosError) => {
-      // logout user if 401 is returned and we're not already on the login page
+      const refreshEndpoint = ENDPOINTS.auth.refresh;
+      const isRefreshRequest = error.config?.url?.includes(refreshEndpoint);
 
-      if (error.response?.status === 401) {
+      if (error.response?.status === 401 && !isRefreshRequest) {
+        useAuthStore.getState().clearAuth();
         void router.navigate(PATHS.auth.login, { replace: true });
       }
 

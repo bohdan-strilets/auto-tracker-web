@@ -4,7 +4,6 @@ export { ERROR_CODES } from './error-codes';
 export type {
   ErrorResponse,
   ErrorDetail,
-  ApiResponse,
   PaginatedResponse,
   PaginationMeta,
   RequestOptions,

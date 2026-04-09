@@ -33,9 +33,12 @@ export type AuthState = {
   user: User | null;
   accessToken: string | null;
   isAuthenticated: boolean;
+  isInitialized: boolean;
 };
 
 export type AuthActions = {
   setAuth: (user: User, accessToken: string) => void;
   clearAuth: () => void;
+  setAccessToken: (accessToken: string) => void;
+  setInitialized: () => void;
 };

@@ -13,29 +13,41 @@ import { StatisticsPage } from '@pages/StatisticsPage';
 import { TimelinePage } from '@pages/TimelinePage';
 import { VehiclePage } from '@pages/VehiclePage';
 
+import { ProtectedRoute, PublicRoute } from './guards';
+
 export const router = createBrowserRouter([
-  // Auth routes (public)
+  // Public
   {
-    path: '/auth',
-    element: <AuthLayout />,
+    element: <PublicRoute />,
     children: [
-      { path: 'login', element: <LoginPage /> },
-      { path: 'register', element: <RegisterPage /> },
+      {
+        path: '/auth',
+        element: <AuthLayout />,
+        children: [
+          { path: 'login', element: <LoginPage /> },
+          { path: 'register', element: <RegisterPage /> },
+        ],
+      },
     ],
   },
 
-  // App routes (private)
+  // Protected
   {
-    path: '/',
+    element: <ProtectedRoute />,
     children: [
-      { index: true, element: <HomePage /> },
-      { path: 'garage', element: <GaragePage /> },
-      { path: 'garage/:vehicleId', element: <VehiclePage /> },
-      { path: 'garage/:vehicleId/timeline', element: <TimelinePage /> },
-      { path: 'garage/:vehicleId/add-event', element: <AddEventPage /> },
-      { path: 'reminders', element: <RemindersPage /> },
-      { path: 'statistics', element: <StatisticsPage /> },
-      { path: 'profile', element: <ProfilePage /> },
+      {
+        path: '/',
+        children: [
+          { index: true, element: <HomePage /> },
+          { path: 'garage', element: <GaragePage /> },
+          { path: 'garage/:vehicleId', element: <VehiclePage /> },
+          { path: 'garage/:vehicleId/timeline', element: <TimelinePage /> },
+          { path: 'garage/:vehicleId/add-event', element: <AddEventPage /> },
+          { path: 'reminders', element: <RemindersPage /> },
+          { path: 'statistics', element: <StatisticsPage /> },
+          { path: 'profile', element: <ProfilePage /> },
+        ],
+      },
     ],
   },
 

@@ -1,3 +1,5 @@
+import type { User } from '@entities/user';
+
 import { ENDPOINTS, http } from '@shared/api';
 
 import type {
@@ -26,5 +28,9 @@ export const authApi = {
 
   refresh: () => {
     return http.post<RefreshResponse>(ENDPOINTS.auth.refresh);
+  },
+
+  me: async (): Promise<User> => {
+    return http.get<User>(ENDPOINTS.auth.me);
   },
 };
