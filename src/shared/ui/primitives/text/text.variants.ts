@@ -22,6 +22,9 @@ export const textVariants = cva('', {
       tertiary: 'text-text-tertiary',
       disabled: 'text-text-disabled',
       inverse: 'text-text-inverse',
+      error: 'text-error',
+      success: 'text-success',
+      warning: 'text-warning',
     },
 
     truncate: {
