@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { AuthLayout } from '@app/layouts';
+import { AppLayout, AuthLayout } from '@app/layouts';
 
 import { AddEventPage } from '@pages/AddEvent';
 import { GaragePage } from '@pages/GaragePage';
@@ -42,6 +42,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
+        element: <AppLayout />,
         children: [
           // Verified — only for users with verified email
           {
