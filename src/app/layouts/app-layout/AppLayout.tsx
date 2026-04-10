@@ -7,7 +7,7 @@ import { Sidebar } from './ui/Sidebar';
 
 export const AppLayout = () => {
   return (
-    <Stack className="h-screen overflow-hidden">
+    <Stack direction="row" className="h-screen overflow-hidden">
       <Sidebar />
 
       <main className="flex-1 overflow-y-auto p-6 pb-20 lg:pb-6 min-w-0">
