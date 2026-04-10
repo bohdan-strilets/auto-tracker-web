@@ -3,6 +3,8 @@ export const PATHS = {
     login: '/auth/login',
     register: '/auth/register',
     verifyEmail: '/auth/verify-email',
+    forgotPassword: '/auth/forgot-password',
+    resetPassword: '/auth/reset-password',
   },
 
   garage: {

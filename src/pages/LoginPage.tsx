@@ -14,6 +14,10 @@ export const LoginPage = () => {
       <LoginForm />
 
       <Text align="center" size="sm">
+        <Link to={PATHS.auth.forgotPassword}>Forgot your password?</Link>
+      </Text>
+
+      <Text align="center" size="sm">
         Don't have an account? <Link to={PATHS.auth.register}>Create one</Link>
       </Text>
     </Stack>

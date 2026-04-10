@@ -3,12 +3,14 @@ import { createBrowserRouter } from 'react-router-dom';
 import { AppLayout, AuthLayout } from '@app/layouts';
 
 import { AddEventPage } from '@pages/AddEvent';
+import { ForgotPasswordPage } from '@pages/ForgotPasswordPage';
 import { GaragePage } from '@pages/GaragePage';
 import { HomePage } from '@pages/HomePage';
 import { LoginPage } from '@pages/LoginPage';
 import { ProfilePage } from '@pages/ProfilePage';
 import { RegisterPage } from '@pages/RegisterPage';
 import { RemindersPage } from '@pages/RemindersPage';
+import { ResetPasswordPage } from '@pages/ResetPasswordPage';
 import { StatisticsPage } from '@pages/StatisticsPage';
 import { TimelinePage } from '@pages/TimelinePage';
 import { VehiclePage } from '@pages/VehiclePage';
@@ -28,6 +30,8 @@ export const router = createBrowserRouter([
         children: [
           { path: 'login', element: <LoginPage /> },
           { path: 'register', element: <RegisterPage /> },
+          { path: 'forgot-password', element: <ForgotPasswordPage /> },
+          { path: 'reset-password', element: <ResetPasswordPage /> },
         ],
       },
     ],

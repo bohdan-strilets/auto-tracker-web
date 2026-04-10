@@ -7,6 +7,7 @@ import type {
   LoginPayload,
   RefreshResponse,
   RegisterPayload,
+  ResetPasswordPayload,
 } from '../model/auth.types';
 
 export const authApi = {
@@ -40,5 +41,13 @@ export const authApi = {
 
   verifyEmail: async (token: string): Promise<void> => {
     await http.post(ENDPOINTS.auth.verifyEmail, { token });
+  },
+
+  forgotPassword: (email: string): Promise<void> => {
+    return http.post(ENDPOINTS.auth.forgotPassword, { email });
+  },
+
+  resetPassword: (payload: ResetPasswordPayload): Promise<void> => {
+    return http.post(ENDPOINTS.auth.resetPassword, payload);
   },
 };

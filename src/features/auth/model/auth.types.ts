@@ -1,5 +1,7 @@
 import type { Locale, User } from '@entities/user';
 
+import type { useForgotPasswordForm } from './use-forgot-password-form';
+
 // Response types
 
 export type AuthResponse = {
@@ -27,6 +29,11 @@ export type RegisterPayload = {
   timezone: string;
 };
 
+export type ResetPasswordPayload = {
+  token: string;
+  password: string;
+};
+
 // Store types
 
 export type AuthState = {
@@ -41,4 +48,9 @@ export type AuthActions = {
   clearAuth: () => void;
   setAccessToken: (accessToken: string) => void;
   setInitialized: () => void;
+};
+
+// UI component props types
+export type ForgotPasswordFormProps = {
+  form: ReturnType<typeof useForgotPasswordForm>;
 };
