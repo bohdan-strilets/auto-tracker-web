@@ -2,12 +2,12 @@ import { Bell, Sun } from 'lucide-react';
 
 import { Badge, Icon, Stack, Text, ThemeToggle } from '@shared/ui';
 
-import { NeuItem } from '../neu';
+import { NeuButton, NeuContainer } from '../neu';
 
 export const Controls = () => {
   return (
     <Stack gap="md">
-      <NeuItem>
+      <NeuButton>
         <Stack direction="row" justify="between" align="center" fullWidth>
           <Icon icon={Bell} size="xs" color="tertiary" />
           <Text size="sm" color="tertiary">
@@ -17,9 +17,9 @@ export const Controls = () => {
             3
           </Badge>
         </Stack>
-      </NeuItem>
+      </NeuButton>
 
-      <NeuItem>
+      <NeuContainer>
         <Stack direction="row" justify="between" align="center" fullWidth>
           <Icon icon={Sun} size="xs" color="tertiary" />
           <Text size="sm" color="tertiary">
@@ -27,7 +27,7 @@ export const Controls = () => {
           </Text>
           <ThemeToggle />
         </Stack>
-      </NeuItem>
+      </NeuContainer>
     </Stack>
   );
 };

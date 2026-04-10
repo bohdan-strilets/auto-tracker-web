@@ -5,7 +5,14 @@ import { cn } from '@shared/lib/utils';
 import { neuStyles } from './neu.styles';
 import type { NeuButtonProps } from './neu.types';
 
-export const NeuButton = ({ children, isActive, danger, onClick, className }: NeuButtonProps) => {
+export const NeuButton = ({
+  children,
+  isActive,
+  danger,
+  onClick,
+  className,
+  ...rest
+}: NeuButtonProps) => {
   const [hovered, setHovered] = React.useState(false);
 
   const style = isActive
@@ -26,7 +33,7 @@ export const NeuButton = ({ children, isActive, danger, onClick, className }: Ne
         setHovered(false);
       }}
       className={cn(
-        'w-[46px] h-[46px] rounded-md',
+        'min-w-12 rounded-md p-3',
         'flex items-center justify-center',
         'relative shrink-0 cursor-pointer',
         'transition-all duration-normal ease-out',
@@ -34,6 +41,7 @@ export const NeuButton = ({ children, isActive, danger, onClick, className }: Ne
         className,
       )}
       style={style}
+      {...rest}
     >
       {children}
     </button>

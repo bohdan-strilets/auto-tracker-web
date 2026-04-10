@@ -10,10 +10,9 @@ export interface NeuDividerProps {
   expanded?: boolean;
 }
 
-export interface NeuItemProps {
+export interface NeuContainerProps {
   children: React.ReactNode;
   isActive?: boolean;
   danger?: boolean;
-  onClick?: () => void;
   className?: string;
 }

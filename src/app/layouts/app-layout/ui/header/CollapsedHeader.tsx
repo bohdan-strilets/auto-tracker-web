@@ -1,11 +1,21 @@
-import { Logo, Stack } from '@shared/ui';
+import { PanelLeft } from 'lucide-react';
 
-import { CollapseButton } from '../collapse-button';
+import { useToggleSidebar } from '@shared/lib/store';
+import { Icon, Logo, Stack, Tooltip } from '@shared/ui';
+
+import { NeuButton } from '../neu';
 
 export const CollapsedHeader = () => {
+  const toggle = useToggleSidebar();
+
   return (
     <Stack gap="md" className="pb-10">
-      <CollapseButton />
+      <Tooltip content="Toggle Sidebar" side="right">
+        <NeuButton onClick={toggle}>
+          <Icon icon={PanelLeft} size="xs" color="tertiary" />
+        </NeuButton>
+      </Tooltip>
+
       <Logo />
     </Stack>
   );

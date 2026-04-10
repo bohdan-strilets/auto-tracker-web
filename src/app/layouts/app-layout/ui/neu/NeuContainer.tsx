@@ -3,9 +3,9 @@ import React from 'react';
 import { cn } from '@shared/lib/utils';
 
 import { neuStyles } from './neu.styles';
-import type { NeuItemProps } from './neu.types';
+import type { NeuContainerProps } from './neu.types';
 
-export const NeuItem = ({ children, isActive, danger, onClick, className }: NeuItemProps) => {
+export const NeuContainer = ({ children, isActive, danger, className }: NeuContainerProps) => {
   const [hovered, setHovered] = React.useState(false);
 
   const style = isActive
@@ -17,8 +17,7 @@ export const NeuItem = ({ children, isActive, danger, onClick, className }: NeuI
         : neuStyles.base;
 
   return (
-    <button
-      onClick={onClick}
+    <div
       onMouseEnter={() => {
         setHovered(true);
       }}
@@ -26,9 +25,9 @@ export const NeuItem = ({ children, isActive, danger, onClick, className }: NeuI
         setHovered(false);
       }}
       className={cn(
-        'flex items-center gap-xs w-full',
-        'px-4 py-3 rounded-md',
-        'relative cursor-pointer',
+        'min-w-12 rounded-md p-3',
+        'flex items-center justify-center',
+        'relative shrink-0',
         'transition-all duration-normal ease-out',
         !isActive && hovered && '-translate-y-px',
         className,
@@ -36,6 +35,6 @@ export const NeuItem = ({ children, isActive, danger, onClick, className }: NeuI
       style={style}
     >
       {children}
-    </button>
+    </div>
   );
 };

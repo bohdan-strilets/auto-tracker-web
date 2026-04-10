@@ -1,4 +1,7 @@
 export * from './neu';
-export { BottomNav } from './bottom-nav/BottomNav';
-export { Sidebar } from './Sidebar';
-export { UserBar } from './UserBar';
+export * from './bottom-nav';
+export * from './controls';
+export * from './header';
+export * from './navigation';
+export * from './user-bar';
+export * from './wrapper';

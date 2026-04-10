@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Icon, Stack, Text } from '@shared/ui';
 
 import { NAV_ITEMS } from '../../config';
-import { NeuItem } from '../neu';
+import { NeuButton } from '../neu';
 
 export const Navigation = () => {
   return (
@@ -11,7 +11,7 @@ export const Navigation = () => {
       {NAV_ITEMS.map((item) => (
         <NavLink key={item.path} to={item.path}>
           {({ isActive }) => (
-            <NeuItem isActive={isActive}>
+            <NeuButton isActive={isActive} className="w-full justify-start">
               <Stack direction="row" align="center" gap="sm">
                 <Icon
                   icon={item.icon}
@@ -28,7 +28,7 @@ export const Navigation = () => {
                   {item.label}
                 </Text>
               </Stack>
-            </NeuItem>
+            </NeuButton>
           )}
         </NavLink>
       ))}
