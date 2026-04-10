@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { cn } from '@shared/lib/utils';
+import { Spinner } from '@shared/ui';
 
 import { neuStyles } from './neu.styles';
 import type { NeuButtonProps } from './neu.types';
@@ -11,6 +12,8 @@ export const NeuButton = ({
   danger,
   onClick,
   className,
+  disabled,
+  loading,
   ...rest
 }: NeuButtonProps) => {
   const [hovered, setHovered] = React.useState(false);
@@ -41,9 +44,10 @@ export const NeuButton = ({
         className,
       )}
       style={style}
+      disabled={disabled || loading}
       {...rest}
     >
-      {children}
+      {loading ? <Spinner size="xs" color="secondary" /> : children}
     </button>
   );
 };

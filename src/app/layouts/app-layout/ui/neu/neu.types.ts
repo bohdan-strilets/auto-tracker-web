@@ -4,6 +4,8 @@ export interface NeuButtonProps {
   danger?: boolean;
   onClick?: () => void;
   className?: string;
+  disabled?: boolean;
+  loading?: boolean;
 }
 
 export interface NeuDividerProps {

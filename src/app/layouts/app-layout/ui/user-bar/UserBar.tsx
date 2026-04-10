@@ -1,5 +1,7 @@
 import { LogOut } from 'lucide-react';
 
+import { useLogoutMutation } from '@features/auth';
+
 import { Avatar, Icon, Stack, Text } from '@shared/ui';
 
 import { NeuButton } from '../neu';
@@ -7,6 +9,8 @@ import { NeuButton } from '../neu';
 import type { UserBarProps } from './user-bar.types';
 
 export const UserBar = ({ fullName, email }: UserBarProps) => {
+  const { mutate: logout, isPending } = useLogoutMutation();
+
   return (
     <Stack gap="md">
       <NeuButton>
@@ -23,7 +27,14 @@ export const UserBar = ({ fullName, email }: UserBarProps) => {
         </Stack>
       </NeuButton>
 
-      <NeuButton danger>
+      <NeuButton
+        danger
+        onClick={() => {
+          logout();
+        }}
+        disabled={isPending}
+        loading={isPending}
+      >
         <Stack direction="row" gap="sm">
           <Icon icon={LogOut} size="xs" color="tertiary" />
           <Text size="xs" color="tertiary" truncate>
