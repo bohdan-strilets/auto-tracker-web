@@ -1,7 +1,7 @@
-import { type VariantProps } from 'class-variance-authority';
+import type { VariantProps } from 'class-variance-authority';
 
-import { dividerVariants } from './divider.variants';
+import type { dividerVariants } from './divider.variants';
 
-export type DividerProps = {
+export interface DividerProps extends VariantProps<typeof dividerVariants> {
   className?: string;
-} & VariantProps<typeof dividerVariants>;
+}

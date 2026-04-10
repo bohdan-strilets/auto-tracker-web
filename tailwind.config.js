@@ -11,7 +11,7 @@ export default {
     'bg-success',
     'bg-warning',
     'bg-error',
-    'bg-primary',
+    'bg-accent',
     'text-fuel',
     'text-service',
     'text-documents',
@@ -20,7 +20,7 @@ export default {
     'text-success',
     'text-warning',
     'text-error',
-    'text-primary',
+    'text-accent',
     'border-fuel',
     'border-service',
     'border-documents',
@@ -33,11 +33,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Brand
-        primary: {
-          DEFAULT: 'var(--color-primary)',
-          light: 'var(--color-primary-light)',
-          dark: 'var(--color-primary-dark)',
+        // Accent (замінює primary)
+        accent: {
+          DEFAULT: 'var(--color-accent)',
+          light: 'var(--color-accent-light)',
+          dark: 'var(--color-accent-dark)',
         },
 
         // Semantic
@@ -59,6 +59,7 @@ export default {
           card: 'var(--color-bg-card)',
           elevated: 'var(--color-bg-elevated)',
           muted: 'var(--color-bg-muted)',
+          sunken: 'var(--color-bg-sunken)',
         },
 
         // Text
@@ -76,7 +77,17 @@ export default {
           medium: 'var(--color-border-medium)',
         },
 
-        // shadcn tokens
+        // Sidebar
+        sidebar: {
+          from: 'var(--color-sidebar-from)',
+          to: 'var(--color-sidebar-to)',
+          icon: 'var(--color-sidebar-icon)',
+          'icon-active': 'var(--color-sidebar-icon-active)',
+          'active-from': 'var(--color-sidebar-active-from)',
+          'active-to': 'var(--color-sidebar-active-to)',
+        },
+
+        // shadcn
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         card: {
@@ -87,6 +98,10 @@ export default {
           DEFAULT: 'var(--popover)',
           foreground: 'var(--popover-foreground)',
         },
+        primary: {
+          DEFAULT: 'var(--primary)',
+          foreground: 'var(--primary-foreground)',
+        },
         secondary: {
           DEFAULT: 'var(--secondary)',
           foreground: 'var(--secondary-foreground)',
@@ -94,10 +109,6 @@ export default {
         muted: {
           DEFAULT: 'var(--muted)',
           foreground: 'var(--muted-foreground)',
-        },
-        accent: {
-          DEFAULT: 'var(--accent)',
-          foreground: 'var(--accent-foreground)',
         },
         destructive: {
           DEFAULT: 'var(--destructive)',
@@ -108,6 +119,7 @@ export default {
       },
 
       borderRadius: {
+        xs: 'var(--radius-xs)',
         sm: 'var(--radius-sm)',
         DEFAULT: 'var(--radius-base)',
         md: 'var(--radius-md)',
@@ -123,8 +135,14 @@ export default {
         card: 'var(--shadow-card)',
         md: 'var(--shadow-md)',
         lg: 'var(--shadow-lg)',
-        'glow-primary': 'var(--shadow-glow-primary)',
+        'glow-accent': 'var(--shadow-glow-accent)',
         'glow-expenses': 'var(--shadow-glow-expenses)',
+        'neu-sm': 'var(--neu-shadow-sm)',
+        neu: 'var(--neu-shadow-base)',
+        'neu-md': 'var(--neu-shadow-md)',
+        'neu-lg': 'var(--neu-shadow-lg)',
+        'neu-inset': 'var(--neu-shadow-inset)',
+        'neu-active': 'var(--neu-shadow-active)',
       },
 
       transitionDuration: {

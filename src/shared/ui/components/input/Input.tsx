@@ -3,6 +3,7 @@ import { forwardRef, useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 
 import { cn } from '@shared/lib/utils';
+import { Stack } from '@shared/ui/primitives';
 
 import { type InputProps } from './input.types';
 import { inputVariants } from './input.variants';
@@ -16,7 +17,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     const state = disabled ? 'disabled' : hasError ? 'error' : 'default';
 
     return (
-      <div className="relative flex items-center w-full">
+      <Stack align="center" justify="center" fullWidth className="relative">
         {leftIcon && <span className="absolute left-3 text-text-tertiary">{leftIcon}</span>}
 
         <input
@@ -47,7 +48,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         {!isPassword && rightIcon && (
           <span className="absolute right-3 text-text-tertiary">{rightIcon}</span>
         )}
-      </div>
+      </Stack>
     );
   },
 );

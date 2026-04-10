@@ -6,7 +6,7 @@ export const buttonVariants = cva(
     'font-semibold whitespace-nowrap',
     'border border-transparent',
     'transition-all duration-fast ease-in-out',
-    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
+    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2',
     'disabled:pointer-events-none disabled:opacity-50',
     'cursor-pointer select-none',
   ],
@@ -14,17 +14,17 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         primary: [
-          'bg-gradient-to-r from-primary-light to-primary',
+          'bg-gradient-to-r from-accent-light to-accent',
           'text-white',
-          'shadow-glow-primary',
+          'shadow-glow-accent',
           'hover:shadow-md hover:brightness-105',
           'active:brightness-95 active:scale-[0.98]',
         ],
 
         secondary: [
-          'bg-primary/10 text-primary',
-          'border border-primary/20',
-          'hover:bg-primary/15',
+          'bg-accent/10 text-accent',
+          'border border-accent/20',
+          'hover:bg-accent/15',
           'active:scale-[0.98]',
         ],
 
@@ -44,9 +44,9 @@ export const buttonVariants = cva(
       },
 
       size: {
-        sm: 'h-9  px-4  text-sm  rounded-xl',
-        md: 'h-11 px-5  text-sm  rounded-2xl',
-        lg: 'h-12 px-6  text-base rounded-full',
+        sm: 'h-9 px-4 text-sm rounded-xl',
+        md: 'h-11 px-5 text-sm rounded-2xl',
+        lg: 'h-12 px-6 text-base rounded-full',
       },
 
       fullWidth: {

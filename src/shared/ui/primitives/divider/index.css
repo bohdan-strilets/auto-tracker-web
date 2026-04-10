@@ -1,0 +1,9 @@
+@layer utilities {
+  .divider-neu {
+    background: linear-gradient(180deg, var(--neu-shadow-dark) 0%, var(--neu-shadow-light) 100%);
+  }
+
+  .divider-neu[aria-orientation='vertical'] {
+    background: linear-gradient(90deg, var(--neu-shadow-dark) 0%, var(--neu-shadow-light) 100%);
+  }
+}

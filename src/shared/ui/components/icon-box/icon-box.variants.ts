@@ -11,7 +11,7 @@ export const iconBoxVariants = cva('inline-flex items-center justify-center shri
 
     color: {
       default: 'bg-bg-muted',
-      primary: '[background-color:rgba(var(--color-primary-rgb),0.1)]',
+      accent: '[background-color:rgba(var(--color-accent-rgb),0.1)]',
       success: '[background-color:rgba(var(--color-success-rgb),0.1)]',
       error: '[background-color:rgba(var(--color-error-rgb),0.1)]',
       warning: '[background-color:rgba(var(--color-warning-rgb),0.1)]',
@@ -23,6 +23,7 @@ export const iconBoxVariants = cva('inline-flex items-center justify-center shri
     },
 
     radius: {
+      xs: 'rounded-xs',
       sm: 'rounded-sm',
       base: 'rounded',
       md: 'rounded-md',
@@ -38,6 +39,8 @@ export const iconBoxVariants = cva('inline-flex items-center justify-center shri
       base: 'shadow',
       card: 'shadow-card',
       md: 'shadow-md',
+      'neu-sm': 'shadow-neu-sm',
+      neu: 'shadow-neu',
     },
   },
 

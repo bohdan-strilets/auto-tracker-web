@@ -5,23 +5,8 @@ import { cn } from '@shared/lib/utils';
 import { Spinner } from '../spinner';
 
 import type { ButtonProps } from './button.types';
+import { SPINNER_COLOR, SPINNER_SIZE } from './button.utils';
 import { buttonVariants } from './button.variants';
-
-const SPINNER_SIZE: Record<NonNullable<ButtonProps['size']>, 'xs' | 'sm'> = {
-  sm: 'xs',
-  md: 'xs',
-  lg: 'sm',
-};
-
-const SPINNER_COLOR: Record<
-  NonNullable<ButtonProps['variant']>,
-  'inverse' | 'primary' | 'secondary'
-> = {
-  primary: 'inverse',
-  secondary: 'primary',
-  ghost: 'secondary',
-  destructive: 'inverse',
-};
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (

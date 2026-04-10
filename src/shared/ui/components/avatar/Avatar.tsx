@@ -1,6 +1,7 @@
 import { type FC } from 'react';
 
 import { cn } from '@shared/lib/utils';
+import { Text } from '@shared/ui/primitives';
 
 import { type AvatarProps } from './avatar.types';
 import { getFallbackText } from './avatar.utils';
@@ -12,9 +13,9 @@ export const Avatar: FC<AvatarProps> = ({ src, alt, fallback, size, className })
       {src ? (
         <img src={src} alt={alt ?? fallback ?? 'avatar'} className="size-full object-cover" />
       ) : (
-        <span className="font-medium text-text-secondary select-none">
+        <Text color="tertiary" weight="medium" truncate>
           {getFallbackText(fallback)}
-        </span>
+        </Text>
       )}
     </div>
   );

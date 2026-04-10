@@ -12,7 +12,7 @@ export const badgeVariants = cva(
 
       color: {
         default: '',
-        primary: '',
+        accent: '',
         fuel: '',
         service: '',
         documents: '',
@@ -32,7 +32,7 @@ export const badgeVariants = cva(
 
     compoundVariants: [
       // solid
-      { variant: 'solid', color: 'primary', className: 'bg-primary text-text-inverse' },
+      { variant: 'solid', color: 'accent', className: 'bg-accent text-text-inverse' },
       { variant: 'solid', color: 'fuel', className: 'bg-fuel text-white' },
       { variant: 'solid', color: 'service', className: 'bg-service text-white' },
       { variant: 'solid', color: 'documents', className: 'bg-documents text-white' },
@@ -45,8 +45,8 @@ export const badgeVariants = cva(
       // subtle
       {
         variant: 'subtle',
-        color: 'primary',
-        className: '[background-color:rgba(var(--color-primary-rgb),0.1)] text-primary',
+        color: 'accent',
+        className: '[background-color:rgba(var(--color-accent-rgb),0.1)] text-accent',
       },
       {
         variant: 'subtle',
@@ -90,7 +90,7 @@ export const badgeVariants = cva(
       },
 
       // outline
-      { variant: 'outline', color: 'primary', className: 'border-primary text-primary' },
+      { variant: 'outline', color: 'accent', className: 'border-accent text-accent' },
       { variant: 'outline', color: 'fuel', className: 'border-fuel text-fuel' },
       { variant: 'outline', color: 'service', className: 'border-service text-service' },
       { variant: 'outline', color: 'documents', className: 'border-documents text-documents' },

@@ -3,14 +3,8 @@ import { type FC } from 'react';
 import { cn } from '@shared/lib/utils';
 
 import { type TitleProps } from './title.types';
+import { levelTagMap } from './title.utils';
 import { titleVariants } from './title.variants';
-
-const levelTagMap = {
-  1: 'h1',
-  2: 'h2',
-  3: 'h3',
-  4: 'h4',
-} as const;
 
 export const Title: FC<TitleProps> = ({
   children,

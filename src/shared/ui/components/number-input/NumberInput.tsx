@@ -29,8 +29,12 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
     return (
       <div
         className={cn(
-          'flex items-center w-full rounded-md bg-bg-muted border transition-all duration-fast',
-          hasError ? 'border-error' : 'border-transparent focus-within:border-primary',
+          'flex items-center w-full rounded-md',
+          'bg-bg-sunken shadow-neu-inset',
+          'border transition-all duration-fast',
+          hasError
+            ? 'border-error/40 focus-within:border-error/60'
+            : 'border-transparent focus-within:border-accent/30',
           disabled && 'opacity-50 cursor-not-allowed',
           className,
         )}

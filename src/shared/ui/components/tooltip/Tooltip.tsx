@@ -5,7 +5,15 @@ import { cn } from '@shared/lib/utils';
 import type { TooltipProps } from './tooltip.types';
 import { tooltipVariants } from './tooltip.variants';
 
-export const Tooltip = ({ content, children, side = 'right', className }: TooltipProps) => {
+export const Tooltip = ({
+  content,
+  children,
+  side = 'right',
+  className,
+  disabled,
+}: TooltipProps) => {
+  if (disabled) return <>{children}</>;
+
   return (
     <RadixTooltip.Root>
       <RadixTooltip.Trigger asChild>{children}</RadixTooltip.Trigger>

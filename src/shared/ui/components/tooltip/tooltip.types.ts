@@ -6,4 +6,5 @@ export interface TooltipProps {
   side?: 'top' | 'right' | 'bottom' | 'left';
   delayDuration?: number;
   className?: string;
+  disabled?: boolean;
 }

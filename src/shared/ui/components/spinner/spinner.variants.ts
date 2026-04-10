@@ -13,7 +13,7 @@ export const spinnerVariants = cva(
       },
 
       color: {
-        primary: 'text-primary',
+        accent: 'text-accent',
         secondary: 'text-text-secondary',
         inverse: 'text-text-inverse',
         success: 'text-success',
@@ -23,7 +23,7 @@ export const spinnerVariants = cva(
 
     defaultVariants: {
       size: 'base',
-      color: 'primary',
+      color: 'accent',
     },
   },
 );

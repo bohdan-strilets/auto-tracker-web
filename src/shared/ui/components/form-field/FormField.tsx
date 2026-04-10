@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 
-import { cn } from '@shared/lib/utils';
+import { Stack, Text } from '@shared/ui/primitives';
 
 import { type FormFieldProps } from './form-field.types';
 
@@ -13,18 +13,30 @@ export const FormField: FC<FormFieldProps> = ({
   className,
 }) => {
   return (
-    <div className={cn('flex flex-col gap-1.5 w-full', className)}>
+    <Stack gap="sm" fullWidth className={className}>
       {label && (
-        <label className="text-sm font-medium text-text-primary">
+        <Text as="label" size="sm" weight="medium" color="primary">
           {label}
-          {required && <span className="text-error ml-1">*</span>}
-        </label>
+          {required && (
+            <Text as="span" color="error" className="ml-1">
+              *
+            </Text>
+          )}
+        </Text>
       )}
 
       {children}
 
-      {error && <p className="text-xs text-error">{error}</p>}
-      {hint && !error && <p className="text-xs text-text-tertiary">{hint}</p>}
-    </div>
+      {error && (
+        <Text size="xs" color="error">
+          {error}
+        </Text>
+      )}
+      {hint && !error && (
+        <Text size="xs" color="tertiary">
+          {hint}
+        </Text>
+      )}
+    </Stack>
   );
 };

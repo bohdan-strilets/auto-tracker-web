@@ -11,3 +11,5 @@ export { FormError } from './form-error';
 export { Link } from './link';
 export { IconBox } from './icon-box';
 export { Tooltip } from './tooltip';
+export { ThemeToggle } from './theme-toggle';
+export { Logo } from './logo';

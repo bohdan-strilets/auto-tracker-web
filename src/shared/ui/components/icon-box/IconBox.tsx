@@ -17,7 +17,7 @@ export const IconBox: FC<IconBoxProps> = ({
   iconColor,
   className,
 }) => {
-  const resolvedIconColor = iconColor ?? (color !== 'default' ? color : 'brand');
+  const resolvedIconColor = iconColor ?? (color !== 'default' ? color : 'accent');
 
   return (
     <div

@@ -17,7 +17,7 @@ export const iconVariants = cva('shrink-0', {
       tertiary: 'text-text-tertiary',
       disabled: 'text-text-disabled',
       inverse: 'text-text-inverse',
-      brand: 'text-primary',
+      accent: 'text-accent',
       success: 'text-success',
       warning: 'text-warning',
       error: 'text-error',

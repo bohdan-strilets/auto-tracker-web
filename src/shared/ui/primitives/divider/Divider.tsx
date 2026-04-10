@@ -5,11 +5,12 @@ import { cn } from '@shared/lib/utils';
 import { type DividerProps } from './divider.types';
 import { dividerVariants } from './divider.variants';
 
-export const Divider: FC<DividerProps> = ({ className, orientation }) => {
+export const Divider: FC<DividerProps> = ({ className, orientation, variant }) => {
   return (
-    <hr
-      className={cn(dividerVariants({ orientation }), className)}
+    <div
+      role="separator"
       aria-orientation={orientation ?? 'horizontal'}
+      className={cn(dividerVariants({ orientation, variant }), className)}
     />
   );
 };

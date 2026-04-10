@@ -1,67 +1,88 @@
 @layer base {
   :root {
-    /* ─── Colors: Brand ─────────────────────────────────────── */
-    --color-primary: #4da3ff;
-    --color-primary-light: #7bc3ff;
-    --color-primary-dark: #3d8fe6;
+    /* ─── Accent ─────────────────────────────────────────────── */
+    --color-accent: #7c6ef7;
+    --color-accent-light: #a99cf9;
+    --color-accent-dark: #6254e0;
+    --color-accent-rgb: 124, 110, 247;
 
-    /* ─── Colors: Semantic ──────────────────────────────────── */
+    /* ─── Semantic ───────────────────────────────────────────── */
     --color-success: #10b981;
     --color-warning: #f59e0b;
     --color-error: #ef4444;
     --color-info: #3b82f6;
+    --color-success-rgb: 16, 185, 129;
+    --color-warning-rgb: 245, 158, 11;
+    --color-error-rgb: 239, 68, 68;
 
-    /* ─── Colors: Event Categories ──────────────────────────── */
+    /* ─── Event categories ───────────────────────────────────── */
     --color-fuel: #3b82f6;
     --color-service: #f97316;
     --color-documents: #10b981;
     --color-expenses: #8b5cf6;
     --color-reminders: #f59e0b;
-
-    /* ─── Colors: RGB values for opacity support ────────────── */
-    --color-primary-rgb: 77, 163, 255;
-    --color-success-rgb: 16, 185, 129;
-    --color-warning-rgb: 245, 158, 11;
-    --color-error-rgb: 239, 68, 68;
     --color-fuel-rgb: 59, 130, 246;
     --color-service-rgb: 249, 115, 22;
     --color-documents-rgb: 16, 185, 129;
     --color-expenses-rgb: 139, 92, 246;
     --color-reminders-rgb: 245, 158, 11;
 
-    /* ─── Colors: Background ────────────────────────────────── */
-    --color-bg: #f6f7fb;
-    --color-bg-card: #ffffff;
-    --color-bg-elevated: #ffffff;
-    --color-bg-muted: #f0f2f7;
+    /* ─── App background ─────────────────────────────────────── */
+    --color-bg: #eef1f8;
+    --color-bg-card: #f4f7fc;
+    --color-bg-elevated: #f9fbff;
+    --color-bg-muted: #e8ecf5;
+    --color-bg-sunken: #e2e7f2;
 
-    /* ─── Colors: Text ──────────────────────────────────────── */
-    --color-text-primary: #1a1d29;
-    --color-text-secondary: #6b7280;
-    --color-text-tertiary: #9ca3af;
-    --color-text-disabled: #d1d5db;
+    /* ─── Sidebar ────────────────────────────────────────────── */
+    --color-sidebar-from: #e8ecf5;
+    --color-sidebar-to: #dde3f0;
+    --color-sidebar-icon: #94a3b8;
+    --color-sidebar-icon-active: rgba(255, 255, 255, 0.9);
+    --color-sidebar-active-from: #7c6ef7;
+    --color-sidebar-active-to: #6254e0;
+
+    /* ─── Neumorphic shadows ─────────────────────────────────── */
+    --neu-shadow-dark: rgba(163, 177, 198, 0.45);
+    --neu-shadow-light: rgba(255, 255, 255, 0.72);
+    --neu-shadow-sm: 2px 2px 5px var(--neu-shadow-dark), -1px -1px 4px var(--neu-shadow-light);
+    --neu-shadow-base: 3px 3px 8px var(--neu-shadow-dark), -2px -2px 6px var(--neu-shadow-light);
+    --neu-shadow-md: 4px 4px 10px var(--neu-shadow-dark), -3px -3px 8px var(--neu-shadow-light);
+    --neu-shadow-lg: 6px 6px 20px var(--neu-shadow-dark), -4px -4px 12px var(--neu-shadow-light);
+    --neu-shadow-inset:
+      inset 2px 2px 5px var(--neu-shadow-dark), inset -1px -1px 4px var(--neu-shadow-light);
+    --neu-shadow-active:
+      3px 3px 8px var(--neu-shadow-dark), -2px -2px 6px var(--neu-shadow-light),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+
+    /* ─── Text ───────────────────────────────────────────────── */
+    --color-text-primary: #1e2540;
+    --color-text-secondary: #64748b;
+    --color-text-tertiary: #94a3b8;
+    --color-text-disabled: #c1cce0;
     --color-text-inverse: #ffffff;
 
-    /* ─── Colors: Border ────────────────────────────────────── */
-    --color-border: rgba(0, 0, 0, 0.1);
-    --color-border-medium: #d1d5db;
+    /* ─── Border ─────────────────────────────────────────────── */
+    --color-border: rgba(0, 0, 0, 0.07);
+    --color-border-medium: #c8d4e8;
 
-    /* ─── Radius ────────────────────────────────────────────── */
-    --radius-sm: 6px;
+    /* ─── Radius ─────────────────────────────────────────────── */
+    --radius-xs: 6px;
+    --radius-sm: 9px;
     --radius-base: 12px;
-    --radius-md: 16px;
-    --radius-lg: 20px;
-    --radius-xl: 24px;
-    --radius-2xl: 32px;
+    --radius-md: 14px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-2xl: 28px;
     --radius-full: 9999px;
 
-    /* ─── Shadows ────────────────────────────────────────────── */
+    /* ─── Shadows (standard) ─────────────────────────────────── */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
-    --shadow-base: 0 2px 8px rgba(0, 0, 0, 0.08);
-    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
-    --shadow-glow-primary: 0 8px 20px rgba(77, 163, 255, 0.25);
+    --shadow-base: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.1);
+    --shadow-glow-accent: 0 8px 20px rgba(124, 110, 247, 0.25);
     --shadow-glow-expenses: 0 8px 20px rgba(139, 92, 246, 0.25);
 
     /* ─── Z-index ────────────────────────────────────────────── */
@@ -82,14 +103,14 @@
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    /* ─── shadcn mapped tokens ───────────────────────────────── */
+    /* ─── shadcn mapped ──────────────────────────────────────── */
     --background: var(--color-bg);
     --foreground: var(--color-text-primary);
     --card: var(--color-bg-card);
     --card-foreground: var(--color-text-primary);
-    --popover: var(--color-bg-card);
+    --popover: var(--color-bg-elevated);
     --popover-foreground: var(--color-text-primary);
-    --primary: var(--color-primary);
+    --primary: var(--color-accent);
     --primary-foreground: var(--color-text-inverse);
     --secondary: var(--color-bg-muted);
     --secondary-foreground: var(--color-text-primary);
@@ -100,31 +121,63 @@
     --destructive: var(--color-error);
     --destructive-foreground: var(--color-text-inverse);
     --border: var(--color-border);
-    --input: var(--color-bg-muted);
-    --ring: var(--color-primary);
+    --input: var(--color-bg-sunken);
+    --ring: var(--color-accent);
     --radius: var(--radius-base);
   }
 
-  /* ─── Dark theme ─────────────────────────────────────────── */
+  /* ─── Dark ───────────────────────────────────────────────── */
   .dark {
-    --color-bg: #0a0e1a;
-    --color-bg-card: #1a1f2e;
-    --color-bg-elevated: #242938;
-    --color-bg-muted: #1a1f2e;
+    /* Accent */
+    --color-accent: #9d91f8;
+    --color-accent-light: #b8b0fa;
+    --color-accent-dark: #7c6ef7;
 
-    --color-text-primary: #f9fafb;
-    --color-text-secondary: #d1d5db;
-    --color-text-tertiary: #9ca3af;
-    --color-text-disabled: #6b7280;
-    --color-text-inverse: #1a1d29;
+    /* App background */
+    --color-bg: #0e1120;
+    --color-bg-card: #151b2e;
+    --color-bg-elevated: #1c2438;
+    --color-bg-muted: #151b2e;
+    --color-bg-sunken: #0b0e1a;
 
-    --color-border: rgba(255, 255, 255, 0.1);
-    --color-border-medium: #363b4a;
+    /* Sidebar */
+    --color-sidebar-from: #131828;
+    --color-sidebar-to: #0e1120;
+    --color-sidebar-icon: #475569;
+    --color-sidebar-icon-active: rgba(20, 25, 40, 0.9);
+    --color-sidebar-active-from: #e8eeff;
+    --color-sidebar-active-to: #d4d0ff;
 
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
-    --shadow-base: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+    /* Neumorphic shadows */
+    --neu-shadow-dark: rgba(0, 0, 0, 0.45);
+    --neu-shadow-light: rgba(255, 255, 255, 0.03);
+    --neu-shadow-sm: 2px 2px 5px var(--neu-shadow-dark), -1px -1px 4px var(--neu-shadow-light);
+    --neu-shadow-base: 3px 3px 8px var(--neu-shadow-dark), -2px -2px 6px var(--neu-shadow-light);
+    --neu-shadow-md: 4px 4px 10px var(--neu-shadow-dark), -3px -3px 8px var(--neu-shadow-light);
+    --neu-shadow-lg: 6px 6px 20px var(--neu-shadow-dark), -4px -4px 12px var(--neu-shadow-light);
+    --neu-shadow-inset:
+      inset 2px 2px 5px var(--neu-shadow-dark), inset -1px -1px 4px var(--neu-shadow-light);
+    --neu-shadow-active:
+      3px 3px 8px var(--neu-shadow-dark), -2px -2px 6px var(--neu-shadow-light),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04), inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+
+    /* Text */
+    --color-text-primary: #e8eeff;
+    --color-text-secondary: #8899bb;
+    --color-text-tertiary: #4a5880;
+    --color-text-disabled: #2a3350;
+    --color-text-inverse: #1e2540;
+
+    /* Border */
+    --color-border: rgba(255, 255, 255, 0.06);
+    --color-border-medium: #1e2a45;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-base: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
+    --shadow-glow-accent: 0 8px 20px rgba(157, 145, 248, 0.2);
   }
 }
