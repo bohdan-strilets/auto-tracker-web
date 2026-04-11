@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 
 import { getErrorMessage, ERROR_CODES, isApiError } from '@shared/api';
-import { PATHS } from '@shared/router';
+import { PATHS } from '@shared/lib/router';
 
 import { useResetPasswordMutation } from '../api';
 

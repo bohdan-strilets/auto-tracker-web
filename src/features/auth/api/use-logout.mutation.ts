@@ -1,7 +1,7 @@
 import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 
-import { PATHS } from '@shared/router';
+import { PATHS } from '@shared/lib/router';
 
 import { useClearAuth } from '../model';
 

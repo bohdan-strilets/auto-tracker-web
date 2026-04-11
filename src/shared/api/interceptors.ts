@@ -4,7 +4,7 @@ import { router } from '@app/router';
 
 import { useAuthStore } from '@features/auth';
 
-import { PATHS } from '@shared/router';
+import { PATHS } from '@shared/lib/router';
 
 import { ApiError } from './api-error';
 import { ENDPOINTS } from './endpoints';

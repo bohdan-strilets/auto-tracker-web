@@ -1,6 +1,6 @@
 import { Car, Bell, BarChart2, User } from 'lucide-react';
 
-import { PATHS } from '@shared/router';
+import { PATHS } from '@shared/lib/router';
 
 import type { NavItem } from './nav-items.types';
 

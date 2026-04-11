@@ -1,6 +1,6 @@
 import { RegisterForm } from '@features/auth';
 
-import { PATHS } from '@shared/router';
+import { PATHS } from '@shared/lib/router';
 import { Title, Text, Link, Stack } from '@shared/ui';
 
 export const RegisterPage = () => {

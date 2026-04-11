@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { isApiError, getErrorMessage, ERROR_CODES } from '@shared/api';
 import { setFieldErrors } from '@shared/lib/form';
-import { PATHS } from '@shared/router';
+import { PATHS } from '@shared/lib/router';
 
 import { useLoginMutation } from '../api';
 

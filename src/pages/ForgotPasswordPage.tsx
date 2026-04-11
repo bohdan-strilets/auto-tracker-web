@@ -2,7 +2,7 @@ import { MailCheck } from 'lucide-react';
 
 import { ForgotPasswordForm, useForgotPasswordForm } from '@features/auth';
 
-import { PATHS } from '@shared/router';
+import { PATHS } from '@shared/lib/router';
 import { IconBox, Link, Stack, Text, Title } from '@shared/ui';
 
 export const ForgotPasswordPage = () => {

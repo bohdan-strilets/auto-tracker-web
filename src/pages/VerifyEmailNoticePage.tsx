@@ -2,7 +2,7 @@ import { Mail } from 'lucide-react';
 
 import { useResendVerification, useUser } from '@features/auth';
 
-import { PATHS } from '@shared/router';
+import { PATHS } from '@shared/lib/router';
 import { Button, IconBox, Link, Stack, Text, Title } from '@shared/ui';
 
 export const VerifyEmailNoticePage = () => {

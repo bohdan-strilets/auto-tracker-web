@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { useIsAuthenticated, useVerifyEmail } from '@features/auth';
 
-import { PATHS } from '@shared/router';
+import { PATHS } from '@shared/lib/router';
 import { Button, IconBox, Link, Spinner, Stack, Text, Title } from '@shared/ui';
 
 export const VerifyEmailPage = () => {

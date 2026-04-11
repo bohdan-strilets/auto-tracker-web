@@ -2,7 +2,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 
 import { useUser } from '@features/auth';
 
-import { PATHS } from '@shared/router';
+import { PATHS } from '@shared/lib/router';
 
 export const VerifiedRoute = () => {
   const user = useUser();

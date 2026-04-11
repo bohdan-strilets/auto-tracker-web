@@ -1,6 +1,6 @@
 import { LoginForm } from '@features/auth';
 
-import { PATHS } from '@shared/router';
+import { PATHS } from '@shared/lib/router';
 import { Link, Stack, Text, Title } from '@shared/ui';
 
 export const LoginPage = () => {
