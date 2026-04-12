@@ -45,6 +45,36 @@ export const colors = {
     },
   },
 
+  workspaces: {
+    personal: {
+      DEFAULT: 'var(--color-personal)',
+      rgb: 'var(--color-personal-rgb)',
+    },
+    family: {
+      DEFAULT: 'var(--color-family)',
+      rgb: 'var(--color-family-rgb)',
+    },
+    business: {
+      DEFAULT: 'var(--color-business)',
+      rgb: 'var(--color-business-rgb)',
+    },
+  },
+
+  roles: {
+    owner: {
+      DEFAULT: 'var(--color-owner)',
+      rgb: 'var(--color-owner-rgb)',
+    },
+    admin: {
+      DEFAULT: 'var(--color-admin)',
+      rgb: 'var(--color-admin-rgb)',
+    },
+    member: {
+      DEFAULT: 'var(--color-member)',
+      rgb: 'var(--color-member-rgb)',
+    },
+  },
+
   bg: {
     DEFAULT: 'var(--color-bg)',
     card: 'var(--color-bg-card)',

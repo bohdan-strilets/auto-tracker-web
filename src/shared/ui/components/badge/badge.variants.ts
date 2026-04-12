@@ -21,6 +21,12 @@ export const badgeVariants = cva(
         success: '',
         error: '',
         warning: '',
+        personal: '',
+        family: '',
+        business: '',
+        owner: '',
+        admin: '',
+        member: '',
       },
 
       size: {
@@ -41,6 +47,12 @@ export const badgeVariants = cva(
       { variant: 'solid', color: 'success', className: 'bg-success text-white' },
       { variant: 'solid', color: 'error', className: 'bg-error text-white' },
       { variant: 'solid', color: 'warning', className: 'bg-warning text-white' },
+      { variant: 'solid', color: 'personal', className: 'bg-personal text-white' },
+      { variant: 'solid', color: 'family', className: 'bg-family text-white' },
+      { variant: 'solid', color: 'business', className: 'bg-business text-white' },
+      { variant: 'solid', color: 'owner', className: 'bg-owner text-white' },
+      { variant: 'solid', color: 'admin', className: 'bg-admin text-white' },
+      { variant: 'solid', color: 'member', className: 'bg-member text-white' },
 
       // subtle
       {
@@ -88,6 +100,36 @@ export const badgeVariants = cva(
         color: 'warning',
         className: '[background-color:rgba(var(--color-warning-rgb),0.1)] text-warning',
       },
+      {
+        variant: 'subtle',
+        color: 'personal',
+        className: '[background-color:rgba(var(--color-personal-rgb),0.1)] text-personal',
+      },
+      {
+        variant: 'subtle',
+        color: 'family',
+        className: '[background-color:rgba(var(--color-family-rgb),0.1)] text-family',
+      },
+      {
+        variant: 'subtle',
+        color: 'business',
+        className: '[background-color:rgba(var(--color-business-rgb),0.1)] text-business',
+      },
+      {
+        variant: 'subtle',
+        color: 'owner',
+        className: '[background-color:rgba(var(--color-owner-rgb),0.1)] text-owner',
+      },
+      {
+        variant: 'subtle',
+        color: 'admin',
+        className: '[background-color:rgba(var(--color-admin-rgb),0.1)] text-admin',
+      },
+      {
+        variant: 'subtle',
+        color: 'member',
+        className: '[background-color:rgba(var(--color-member-rgb),0.1)] text-member',
+      },
 
       // outline
       { variant: 'outline', color: 'accent', className: 'border-accent text-accent' },
@@ -99,6 +141,12 @@ export const badgeVariants = cva(
       { variant: 'outline', color: 'success', className: 'border-success text-success' },
       { variant: 'outline', color: 'error', className: 'border-error text-error' },
       { variant: 'outline', color: 'warning', className: 'border-warning text-warning' },
+      { variant: 'outline', color: 'personal', className: 'border-personal text-personal' },
+      { variant: 'outline', color: 'family', className: 'border-family text-family' },
+      { variant: 'outline', color: 'business', className: 'border-business text-business' },
+      { variant: 'outline', color: 'owner', className: 'border-owner text-owner' },
+      { variant: 'outline', color: 'admin', className: 'border-admin text-admin' },
+      { variant: 'outline', color: 'member', className: 'border-member text-member' },
     ],
 
     defaultVariants: {

@@ -41,4 +41,10 @@ export const coloredCardVariants: Record<string, string> = {
   success: '[background-color:rgba(var(--color-success-rgb),0.1)]',
   error: '[background-color:rgba(var(--color-error-rgb),0.1)]',
   warning: '[background-color:rgba(var(--color-warning-rgb),0.1)]',
+  personal: '[background-color:rgba(var(--color-personal-rgb),0.1)]',
+  family: '[background-color:rgba(var(--color-family-rgb),0.1)]',
+  business: '[background-color:rgba(var(--color-business-rgb),0.1)]',
+  owner: '[background-color:rgba(var(--color-owner-rgb),0.1)]',
+  admin: '[background-color:rgba(var(--color-admin-rgb),0.1)]',
+  member: '[background-color:rgba(var(--color-member-rgb),0.1)]',
 };

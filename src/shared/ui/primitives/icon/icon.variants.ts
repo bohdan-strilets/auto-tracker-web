@@ -26,6 +26,12 @@ export const iconVariants = cva('shrink-0', {
       documents: 'text-documents',
       expenses: 'text-expenses',
       reminders: 'text-reminders',
+      personal: 'text-personal',
+      family: 'text-family',
+      business: 'text-business',
+      owner: 'text-owner',
+      admin: 'text-admin',
+      member: 'text-member',
     },
   },
   defaultVariants: {

@@ -27,6 +27,22 @@
     --color-expenses-rgb: 139, 92, 246;
     --color-reminders-rgb: 245, 158, 11;
 
+    /* ─── Workspace types ────────────────────────────────────── */
+    --color-personal: #8b5cf6;
+    --color-family: #10b981;
+    --color-business: #3b82f6;
+    --color-personal-rgb: 139, 92, 246;
+    --color-family-rgb: 16, 185, 129;
+    --color-business-rgb: 59, 130, 246;
+
+    /* ─── Workspace roles ────────────────────────────────────── */
+    --color-owner: #8b5cf6;
+    --color-admin: #f59e0b;
+    --color-member: #10b981;
+    --color-owner-rgb: 139, 92, 246;
+    --color-admin-rgb: 245, 158, 11;
+    --color-member-rgb: 16, 185, 129;
+
     /* ─── App background ─────────────────────────────────────── */
     --color-bg: #eef1f8;
     --color-bg-card: #f4f7fc;

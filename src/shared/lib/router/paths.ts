@@ -7,16 +7,19 @@ export const PATHS = {
     resetPassword: '/auth/reset-password',
   },
 
-  garage: {
-    list: '/garage',
-    byId: (vehicleId: string) => `/garage/${vehicleId}`,
-    timeline: (vehicleId: string) => `/garage/${vehicleId}/timeline`,
-    addEvent: (vehicleId: string) => `/garage/${vehicleId}/add-event`,
+  workspaces: '/workspaces',
+
+  workspace: {
+    garage: (workspaceId: string) => `/w/${workspaceId}/garage`,
+    vehicle: (workspaceId: string, vehicleId: string) => `/w/${workspaceId}/garage/${vehicleId}`,
+    timeline: (workspaceId: string, vehicleId: string) =>
+      `/w/${workspaceId}/garage/${vehicleId}/timeline`,
+    addEvent: (workspaceId: string, vehicleId: string) =>
+      `/w/${workspaceId}/garage/${vehicleId}/add-event`,
+    reminders: (workspaceId: string) => `/w/${workspaceId}/reminders`,
+    statistics: (workspaceId: string) => `/w/${workspaceId}/statistics`,
   },
 
   verifyEmailNotice: '/verify-email-notice',
-
-  reminders: '/reminders',
-  statistics: '/statistics',
   profile: '/profile',
 } as const;

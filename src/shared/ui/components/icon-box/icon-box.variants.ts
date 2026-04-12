@@ -11,6 +11,13 @@ export const iconBoxVariants = cva('inline-flex items-center justify-center shri
 
     color: {
       default: 'bg-bg-muted',
+      tertiary: 'bg-bg-sunken',
+      personal: '[background-color:rgba(var(--color-personal-rgb),0.1)]',
+      family: '[background-color:rgba(var(--color-family-rgb),0.1)]',
+      business: '[background-color:rgba(var(--color-business-rgb),0.1)]',
+      owner: '[background-color:rgba(var(--color-owner-rgb),0.1)]',
+      admin: '[background-color:rgba(var(--color-admin-rgb),0.1)]',
+      member: '[background-color:rgba(var(--color-member-rgb),0.1)]',
       accent: '[background-color:rgba(var(--color-accent-rgb),0.1)]',
       success: '[background-color:rgba(var(--color-success-rgb),0.1)]',
       error: '[background-color:rgba(var(--color-error-rgb),0.1)]',

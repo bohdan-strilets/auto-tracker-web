@@ -29,6 +29,24 @@ export default {
     'border-success',
     'border-warning',
     'border-error',
+    'bg-personal',
+    'bg-family',
+    'bg-business',
+    'text-personal',
+    'text-family',
+    'text-business',
+    'border-personal',
+    'border-family',
+    'border-business',
+    'bg-owner',
+    'bg-admin',
+    'bg-member',
+    'text-owner',
+    'text-admin',
+    'text-member',
+    'border-owner',
+    'border-admin',
+    'border-member',
   ],
   theme: {
     extend: {
@@ -52,6 +70,16 @@ export default {
         documents: 'var(--color-documents)',
         expenses: 'var(--color-expenses)',
         reminders: 'var(--color-reminders)',
+
+        // Workspace types
+        personal: 'var(--color-personal)',
+        family: 'var(--color-family)',
+        business: 'var(--color-business)',
+
+        // Workspace roles
+        owner: 'var(--color-owner)',
+        admin: 'var(--color-admin)',
+        member: 'var(--color-member)',
 
         // Background
         bg: {
