@@ -1,66 +1,66 @@
 @layer base {
   :root {
     /* ─── Accent ─────────────────────────────────────────────── */
-    --color-accent: #7c6ef7;
-    --color-accent-light: #a99cf9;
-    --color-accent-dark: #6254e0;
-    --color-accent-rgb: 124, 110, 247;
+    --color-accent: #5b9cf6;
+    --color-accent-light: #89baf9;
+    --color-accent-dark: #3b7de8;
+    --color-accent-rgb: 91, 156, 246;
 
     /* ─── Semantic ───────────────────────────────────────────── */
-    --color-success: #10b981;
-    --color-warning: #f59e0b;
-    --color-error: #ef4444;
-    --color-info: #3b82f6;
-    --color-success-rgb: 16, 185, 129;
-    --color-warning-rgb: 245, 158, 11;
-    --color-error-rgb: 239, 68, 68;
+    --color-success: #34d399;
+    --color-warning: #fbbf24;
+    --color-error: #f87171;
+    --color-info: #38bdf8;
+    --color-success-rgb: 52, 211, 153;
+    --color-warning-rgb: 251, 191, 36;
+    --color-error-rgb: 248, 113, 113;
 
     /* ─── Event categories ───────────────────────────────────── */
-    --color-fuel: #3b82f6;
-    --color-service: #f97316;
-    --color-documents: #10b981;
-    --color-expenses: #8b5cf6;
-    --color-reminders: #f59e0b;
-    --color-fuel-rgb: 59, 130, 246;
-    --color-service-rgb: 249, 115, 22;
-    --color-documents-rgb: 16, 185, 129;
-    --color-expenses-rgb: 139, 92, 246;
-    --color-reminders-rgb: 245, 158, 11;
+    --color-fuel: #f472b6;
+    --color-service: #fb923c;
+    --color-documents: #34d399;
+    --color-expenses: #e879f9;
+    --color-reminders: #facc15;
+    --color-fuel-rgb: 244, 114, 182;
+    --color-service-rgb: 251, 146, 60;
+    --color-documents-rgb: 52, 211, 153;
+    --color-expenses-rgb: 232, 121, 249;
+    --color-reminders-rgb: 250, 204, 21;
 
     /* ─── Workspace types ────────────────────────────────────── */
-    --color-personal: #8b5cf6;
-    --color-family: #10b981;
-    --color-business: #3b82f6;
-    --color-personal-rgb: 139, 92, 246;
-    --color-family-rgb: 16, 185, 129;
-    --color-business-rgb: 59, 130, 246;
+    --color-personal: #818cf8;
+    --color-family: #34d399;
+    --color-business: #38bdf8;
+    --color-personal-rgb: 129, 140, 248;
+    --color-family-rgb: 52, 211, 153;
+    --color-business-rgb: 56, 189, 248;
 
     /* ─── Workspace roles ────────────────────────────────────── */
-    --color-owner: #8b5cf6;
-    --color-admin: #f59e0b;
-    --color-member: #10b981;
-    --color-owner-rgb: 139, 92, 246;
-    --color-admin-rgb: 245, 158, 11;
-    --color-member-rgb: 16, 185, 129;
+    --color-owner: #a78bfa;
+    --color-admin: #fbbf24;
+    --color-member: #2dd4bf;
+    --color-owner-rgb: 167, 139, 250;
+    --color-admin-rgb: 251, 191, 36;
+    --color-member-rgb: 45, 212, 191;
 
     /* ─── App background ─────────────────────────────────────── */
-    --color-bg: #eef1f8;
-    --color-bg-card: #f4f7fc;
-    --color-bg-elevated: #f9fbff;
-    --color-bg-muted: #e8ecf5;
-    --color-bg-sunken: #e2e7f2;
+    --color-bg: #eef2fb;
+    --color-bg-card: #f5f8ff;
+    --color-bg-elevated: #fbfcff;
+    --color-bg-muted: #e6ecf8;
+    --color-bg-sunken: #dde5f5;
 
     /* ─── Sidebar ────────────────────────────────────────────── */
-    --color-sidebar-from: #e8ecf5;
-    --color-sidebar-to: #dde3f0;
+    --color-sidebar-from: #e6ecf8;
+    --color-sidebar-to: #d8e2f4;
     --color-sidebar-icon: #94a3b8;
     --color-sidebar-icon-active: rgba(255, 255, 255, 0.9);
-    --color-sidebar-active-from: #7c6ef7;
-    --color-sidebar-active-to: #6254e0;
+    --color-sidebar-active-from: #5b9cf6;
+    --color-sidebar-active-to: #3b7de8;
 
     /* ─── Neumorphic shadows ─────────────────────────────────── */
-    --neu-shadow-dark: rgba(163, 177, 198, 0.45);
-    --neu-shadow-light: rgba(255, 255, 255, 0.72);
+    --neu-shadow-dark: rgba(150, 170, 210, 0.4);
+    --neu-shadow-light: rgba(255, 255, 255, 0.8);
     --neu-shadow-sm: 2px 2px 5px var(--neu-shadow-dark), -1px -1px 4px var(--neu-shadow-light);
     --neu-shadow-base: 3px 3px 8px var(--neu-shadow-dark), -2px -2px 6px var(--neu-shadow-light);
     --neu-shadow-md: 4px 4px 10px var(--neu-shadow-dark), -3px -3px 8px var(--neu-shadow-light);
@@ -69,18 +69,18 @@
       inset 2px 2px 5px var(--neu-shadow-dark), inset -1px -1px 4px var(--neu-shadow-light);
     --neu-shadow-active:
       3px 3px 8px var(--neu-shadow-dark), -2px -2px 6px var(--neu-shadow-light),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+      inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 
     /* ─── Text ───────────────────────────────────────────────── */
-    --color-text-primary: #1e2540;
-    --color-text-secondary: #64748b;
-    --color-text-tertiary: #94a3b8;
-    --color-text-disabled: #c1cce0;
+    --color-text-primary: #1a2340;
+    --color-text-secondary: #5a6a8a;
+    --color-text-tertiary: #8fa0be;
+    --color-text-disabled: #bccde0;
     --color-text-inverse: #ffffff;
 
     /* ─── Border ─────────────────────────────────────────────── */
-    --color-border: rgba(0, 0, 0, 0.07);
-    --color-border-medium: #c8d4e8;
+    --color-border: rgba(91, 156, 246, 0.08);
+    --color-border-medium: #c5d4ee;
 
     /* ─── Radius ─────────────────────────────────────────────── */
     --radius-xs: 6px;
@@ -93,13 +93,13 @@
     --radius-full: 9999px;
 
     /* ─── Shadows (standard) ─────────────────────────────────── */
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
-    --shadow-base: 0 2px 8px rgba(0, 0, 0, 0.06);
-    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.1);
-    --shadow-glow-accent: 0 8px 20px rgba(124, 110, 247, 0.25);
-    --shadow-glow-expenses: 0 8px 20px rgba(139, 92, 246, 0.25);
+    --shadow-sm: 0 1px 2px rgba(60, 100, 180, 0.04);
+    --shadow-base: 0 2px 8px rgba(60, 100, 180, 0.06);
+    --shadow-card: 0 4px 16px rgba(60, 100, 180, 0.07);
+    --shadow-md: 0 8px 24px rgba(60, 100, 180, 0.09);
+    --shadow-lg: 0 12px 32px rgba(60, 100, 180, 0.11);
+    --shadow-glow-accent: 0 8px 20px rgba(91, 156, 246, 0.3);
+    --shadow-glow-expenses: 0 8px 20px rgba(232, 121, 249, 0.25);
 
     /* ─── Z-index ────────────────────────────────────────────── */
     --z-dropdown: 100;
@@ -145,27 +145,28 @@
   /* ─── Dark ───────────────────────────────────────────────── */
   .dark {
     /* Accent */
-    --color-accent: #9d91f8;
-    --color-accent-light: #b8b0fa;
-    --color-accent-dark: #7c6ef7;
+    --color-accent: #7ab3f8;
+    --color-accent-light: #a0c8fa;
+    --color-accent-dark: #5b9cf6;
+    --color-accent-rgb: 122, 179, 248;
 
     /* App background */
-    --color-bg: #0e1120;
-    --color-bg-card: #151b2e;
-    --color-bg-elevated: #1c2438;
-    --color-bg-muted: #151b2e;
-    --color-bg-sunken: #0b0e1a;
+    --color-bg: #0d1120;
+    --color-bg-card: #131a2e;
+    --color-bg-elevated: #1a2438;
+    --color-bg-muted: #131a2e;
+    --color-bg-sunken: #0a0e1a;
 
     /* Sidebar */
-    --color-sidebar-from: #131828;
-    --color-sidebar-to: #0e1120;
-    --color-sidebar-icon: #475569;
-    --color-sidebar-icon-active: rgba(20, 25, 40, 0.9);
-    --color-sidebar-active-from: #e8eeff;
-    --color-sidebar-active-to: #d4d0ff;
+    --color-sidebar-from: #111828;
+    --color-sidebar-to: #0d1120;
+    --color-sidebar-icon: #4a5880;
+    --color-sidebar-icon-active: rgba(15, 22, 40, 0.9);
+    --color-sidebar-active-from: #c8deff;
+    --color-sidebar-active-to: #a8c8ff;
 
     /* Neumorphic shadows */
-    --neu-shadow-dark: rgba(0, 0, 0, 0.45);
+    --neu-shadow-dark: rgba(0, 0, 0, 0.5);
     --neu-shadow-light: rgba(255, 255, 255, 0.03);
     --neu-shadow-sm: 2px 2px 5px var(--neu-shadow-dark), -1px -1px 4px var(--neu-shadow-light);
     --neu-shadow-base: 3px 3px 8px var(--neu-shadow-dark), -2px -2px 6px var(--neu-shadow-light);
@@ -179,21 +180,22 @@
 
     /* Text */
     --color-text-primary: #e8eeff;
-    --color-text-secondary: #8899bb;
-    --color-text-tertiary: #4a5880;
-    --color-text-disabled: #2a3350;
-    --color-text-inverse: #1e2540;
+    --color-text-secondary: #7a90b8;
+    --color-text-tertiary: #3a4a68;
+    --color-text-disabled: #222e48;
+    --color-text-inverse: #0d1120;
 
     /* Border */
-    --color-border: rgba(255, 255, 255, 0.06);
-    --color-border-medium: #1e2a45;
+    --color-border: rgba(255, 255, 255, 0.05);
+    --color-border-medium: #1a2a45;
 
     /* Shadows */
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-    --shadow-base: 0 2px 8px rgba(0, 0, 0, 0.4);
-    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
-    --shadow-glow-accent: 0 8px 20px rgba(157, 145, 248, 0.2);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+    --shadow-base: 0 2px 8px rgba(0, 0, 0, 0.45);
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.45);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.65);
+    --shadow-glow-accent: 0 8px 20px rgba(122, 179, 248, 0.2);
+    --shadow-glow-expenses: 0 8px 20px rgba(232, 121, 249, 0.2);
   }
 }
