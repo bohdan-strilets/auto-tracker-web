@@ -17,8 +17,7 @@ export const BrandPanel = () => {
       }}
     >
       <Stack direction="row" align="center" gap="sm">
-        <Logo />
-        <Text weight="semibold">AutoTracker</Text>
+        <Logo variant="full" size="sm" />
       </Stack>
 
       <Stack gap="sm">

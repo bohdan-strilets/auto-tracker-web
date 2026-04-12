@@ -16,7 +16,7 @@ export const CollapsedHeader = () => {
         </NeuButton>
       </Tooltip>
 
-      <Logo />
+      <Logo size="xs" />
     </Stack>
   );
 };
