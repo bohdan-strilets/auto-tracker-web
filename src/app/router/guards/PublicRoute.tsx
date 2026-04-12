@@ -8,7 +8,7 @@ export const PublicRoute = () => {
   const isAuthenticated = useIsAuthenticated();
 
   if (isAuthenticated) {
-    return <Navigate to={PATHS.garage.list} replace />;
+    return <Navigate to={PATHS.workspaces} replace />;
   }
 
   return <Outlet />;

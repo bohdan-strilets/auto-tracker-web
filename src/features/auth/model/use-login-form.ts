@@ -23,7 +23,7 @@ export const useLoginForm = () => {
     try {
       const { user, accessToken } = await mutateAsync(values);
       setAuth(user, accessToken);
-      await navigate(PATHS.garage.list, { replace: true });
+      await navigate(PATHS.workspaces, { replace: true });
     } catch (error) {
       if (isApiError(error)) {
         if (error.details?.length) {

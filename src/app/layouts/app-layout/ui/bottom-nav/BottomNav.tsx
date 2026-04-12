@@ -1,11 +1,16 @@
 import { NavLink } from 'react-router-dom';
 
+import { useActiveWorkspaceId } from '@features/workspace';
+
 import { Icon, Stack } from '@shared/ui';
 
-import { NAV_ITEMS } from '../../config/nav-items';
+import { getNavItems, type NavItem } from '../../config';
 import { NeuButton, sidebarSurfaceStyle } from '../neu';
 
 export const BottomNav = () => {
+  const activeWorkspaceId = useActiveWorkspaceId();
+  const navItems: NavItem[] = activeWorkspaceId ? getNavItems(activeWorkspaceId) : [];
+
   return (
     <Stack
       as="nav"
@@ -15,7 +20,7 @@ export const BottomNav = () => {
       className="p-4 lg:hidden fixed bottom-0 left-0 right-0 z-sticky"
       style={{ ...sidebarSurfaceStyle }}
     >
-      {NAV_ITEMS.map((item) => (
+      {navItems.map((item) => (
         <NavLink key={item.path} to={item.path}>
           {({ isActive }) => (
             <NeuButton isActive={isActive}>

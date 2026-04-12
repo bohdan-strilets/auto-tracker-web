@@ -1,8 +1,8 @@
-import { Briefcase, Home, User } from 'lucide-react';
+import { Briefcase, Home, User, type LucideIcon } from 'lucide-react';
 
 import type { WorkspaceRole, WorkspaceType } from './workspace.enums';
 
-export const WORKSPACE_TYPE_ICON: Record<WorkspaceType, typeof User> = {
+export const WORKSPACE_TYPE_ICON: Record<WorkspaceType, LucideIcon> = {
   PERSONAL: User,
   FAMILY: Home,
   BUSINESS: Briefcase,
@@ -20,10 +20,10 @@ export const WORKSPACE_TYPE_COLOR: Record<WorkspaceType, 'personal' | 'family' |
   BUSINESS: 'business',
 };
 
-export const ROLE_COLOR: Record<WorkspaceRole, 'accent' | 'warning' | 'default'> = {
-  OWNER: 'accent',
-  ADMIN: 'warning',
-  MEMBER: 'default',
+export const ROLE_COLOR: Record<WorkspaceRole, 'owner' | 'admin' | 'member'> = {
+  OWNER: 'owner',
+  ADMIN: 'admin',
+  MEMBER: 'member',
 };
 
 export const ROLE_LABEL: Record<WorkspaceRole, string> = {

@@ -1,11 +1,10 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 
 import { AppLayout, AuthLayout } from '@app/layouts';
 
 import { AddEventPage } from '@pages/AddEvent';
 import { ForgotPasswordPage } from '@pages/ForgotPasswordPage';
 import { GaragePage } from '@pages/GaragePage';
-import { HomePage } from '@pages/HomePage';
 import { LoginPage } from '@pages/LoginPage';
 import { ProfilePage } from '@pages/ProfilePage';
 import { RegisterPage } from '@pages/RegisterPage';
@@ -16,6 +15,9 @@ import { TimelinePage } from '@pages/TimelinePage';
 import { VehiclePage } from '@pages/VehiclePage';
 import { VerifyEmailNoticePage } from '@pages/VerifyEmailNoticePage';
 import { VerifyEmailPage } from '@pages/VerifyEmailPage';
+import { WorkspacesPage } from '@pages/WorkspacesPage';
+
+import { PATHS } from '@shared/lib/router';
 
 import { ProtectedRoute, PublicRoute, VerifiedRoute } from './guards';
 
@@ -52,13 +54,16 @@ export const router = createBrowserRouter([
           {
             element: <VerifiedRoute />,
             children: [
-              { index: true, element: <HomePage /> },
-              { path: 'garage', element: <GaragePage /> },
-              { path: 'garage/:vehicleId', element: <VehiclePage /> },
-              { path: 'garage/:vehicleId/timeline', element: <TimelinePage /> },
-              { path: 'garage/:vehicleId/add-event', element: <AddEventPage /> },
-              { path: 'reminders', element: <RemindersPage /> },
-              { path: 'statistics', element: <StatisticsPage /> },
+              { index: true, element: <Navigate to={PATHS.workspaces} replace /> },
+              { path: 'workspaces', element: <WorkspacesPage /> },
+
+              // Workspace scoped
+              { path: 'w/:workspaceId/garage', element: <GaragePage /> },
+              { path: 'w/:workspaceId/garage/:vehicleId', element: <VehiclePage /> },
+              { path: 'w/:workspaceId/garage/:vehicleId/timeline', element: <TimelinePage /> },
+              { path: 'w/:workspaceId/garage/:vehicleId/add-event', element: <AddEventPage /> },
+              { path: 'w/:workspaceId/reminders', element: <RemindersPage /> },
+              { path: 'w/:workspaceId/statistics', element: <StatisticsPage /> },
               { path: 'profile', element: <ProfilePage /> },
             ],
           },
